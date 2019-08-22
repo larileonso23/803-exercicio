@@ -1,28 +1,28 @@
-#class Animal:
- #   def __init__(self, nome, dono):
-  #      self.nome = nome
-  #      self.dono = dono
+class Pessoa:
+    def __init__ (self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+        
+    # def dados_pessoa (self):
+       # print(nome, idade)
 
-   # def comer(self):
-    #    print('Nhom nhom')
+class Medico(Pessoa):
+    def __init__ (self, nome, idade, crm):
+        super().__init__(nome, idade)
+        self.crm = crm
 
-#class Gato(Animal):
+    # def dados_medico (self):
+       # print(nome, idade, crm)
 
-   # def __init__(self, nome, dono, raca):
+class Paciente(Pessoa):
+    def __init__(self,nome,idade,infermidade):
+        super().__init__(nome,idade)
+        self.infermidade = infermidade
+    
 
-      
-       # super().__init__(nome, dono)
-       # self.raca = raca
-
-   # def miar(self):
-       # print('Minhauuuuu')
-
-#class Cachorro(Animal):
-    #def latir(self):
-       # print('Au auuuu')
-
-#gato = Gato('xuxuzinho', 'Matheus', 'siames')
-#cachorro = Cachorro('rex', 'Groger')
-#animal = Animal('nome', 'dono')
-
-#print(gato.raca)
+pessoa = Pessoa('Lucas', 19)
+medico = Medico('Larissa', 15, 3723)
+paciente = Paciente('matheus', 15, 'colesterol')
+print (medico.nome, medico.idade, medico.crm)
+print(pessoa.nome, pessoa.idade)
+print(paciente.nome, paciente.idade, paciente.infermidade)
